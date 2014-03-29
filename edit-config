@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec docker run -i -t --volumes-from=gerrit-web --rm=true  busybox vi /home/gerrit/etc/gerrit.config
