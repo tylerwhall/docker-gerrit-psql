@@ -1,0 +1,8 @@
+#!/bin/sh
+
+UNITDIR=/etc/systemd/system
+#UNITDIR=/media/state/units
+
+for f in *.service; do
+    install -D -m 644 $f $UNITDIR/$f
+done

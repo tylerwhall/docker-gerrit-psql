@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. ./db_env
+
+docker run \
+    -e POSTGRESQL_DB -e POSTGRESQL_USER -e POSTGRESQL_PASS \
+    --name=gerrit-db orchardup/postgresql

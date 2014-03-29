@@ -1,0 +1,13 @@
+[Unit]
+Description=Gerrit Database Container
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+RestartSec=10s
+ExecStart=/usr/bin/docker start -a gerrit-db
+ExecStop=/usr/bin/docker stop gerrit-db
+
+[Install]
+WantedBy=local.target

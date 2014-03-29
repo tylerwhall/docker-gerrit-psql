@@ -1,0 +1,15 @@
+[Unit]
+Description=Gerrit Code Review
+After=docker.service
+Requires=docker.service
+After=gerrit-db.service
+Requires=gerrit-db.service
+
+[Service]
+Restart=always
+RestartSec=10s
+ExecStart=/usr/bin/docker start -a gerrit-web
+ExecStop=/usr/bin/docker stop gerrit-web
+
+[Install]
+WantedBy=local.target

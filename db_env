@@ -1,0 +1,3 @@
+POSTGRESQL_DB=gerrit
+POSTGRESQL_USER=gerrit
+POSTGRESQL_PASS=changeme
